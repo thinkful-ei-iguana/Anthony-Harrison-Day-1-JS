@@ -1,6 +1,13 @@
-function createGreeting(name, age) {
-    let yearOfBirth = 2019 - age;
-    return `Hi, my name is ${name} and I \'m ${age} years old on ${yearOfBirth}`;
+function yearOfBirth(age) {
+    if(age < 0) {
+        throw new Error("Age cannot be negative");
+    }
+    return 2019 - age;
 }
 
-createGreeting("Harrison", 17);
+function createGreeting(name, age) {
+    return `Hi, my name is ${name} and I \'m ${age} years old on ${yearOfBirth(age)}`;
+}
+
+createGreeting("Harrison", 1);
+
