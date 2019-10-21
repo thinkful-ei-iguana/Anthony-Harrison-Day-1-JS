@@ -77,13 +77,45 @@ const result_2 = turtleArray.map(coordinates => {
 });
 
 let counter = 1;
-result_2.forEach(num => {
-    // let counter = counter++;
-    if(num === 1) {
-        console.log(`Movement #${counter}: ${num} step`);
-    } else {
-        console.log(`Movement #${counter}: ${num} steps`);
-    }
-    counter++;
-});
+// result_2.forEach(num => {
+//     // let counter = counter++;
+//     if(num === 1) {
+//         console.log(`Movement #${counter}: ${num} step`);
+//     } else {
+//         console.log(`Movement #${counter}: ${num} steps`);
+//     }
+//     counter++;
+// });
 
+let decodeString = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
+// NO_NE
+let decodeArray = decodeString.split(' ').reduce(myFunc);
+
+let acc = '';
+
+function myFunc(param1, param2) {
+    if(param1 === 'noggin' && param2 === 'oreo') {
+        return 'NO';
+    }
+
+    if(param2.length === 3) {
+        return param1 + ' ';
+    } else {
+        return param1 + param2.slice(-1).toUpperCase();
+    }
+
+    // return param1 + param2;
+}
+console.log(decodeArray);
+
+// var numbers = [175, 50, 25, 123, 140, 23];
+
+// // document.getElementById("demo").innerHTML = numbers.reduce(myFunc);
+
+// function myFunc2(total, num) {
+//   return total + num;
+// }
+
+// console.log(numbers.reduce(myFunc2));
+
+// 175 + 50 => myFunc2(225, 25) = 250 => myFunc(250, 123)
