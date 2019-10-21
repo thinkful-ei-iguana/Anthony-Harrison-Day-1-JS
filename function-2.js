@@ -69,3 +69,42 @@ function daysInAMonth(month, leapYear) {
 }
 
 console.log(daysInAMonth('Febuary', false));
+
+function rockPaper(num) {
+  const rock = 1;
+  const paper = 2;
+  const scissors = 3;
+  const randomNo = Math.floor(Math.random() * 3) + 1;
+
+  if (num > 3 || num < 1) {
+    return new Error('Input must be a number 1 - 3');
+  }
+  switch (num) {
+  case 1:
+    console.log('rock');
+    if (randomNo === 2) {
+      console.log('You Lost');
+    } else if (randomNo === 3) {
+      console.log('You Win');
+    }
+    break;
+  case 2:
+    console.log('paper');
+    if (randomNo === 3) {
+      console.log('You Lost');
+    } else if (randomNo === 1) {
+      console.log('You Win');
+    }
+    break;
+  case 3:
+    console.log('scissors');
+    if (randomNo === 1) {
+      console.log('You Lost');
+    } else if (randomNo === 2) {
+      console.log('You Win');
+    }
+    break;
+  }
+}
+
+console.log(rockPaper(3));
