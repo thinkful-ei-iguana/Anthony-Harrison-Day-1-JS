@@ -1,7 +1,5 @@
-function createGreeting() {
-    return 'Hi, my name is Harrison and I \'m 17 years old';
+function createGreeting(name, age) {
+    return `Hi, my name is ${name} and I \'m ${age} years old`;
 }
 
-let greeting = createGreeting();
-
-console.log(greeting);
+createGreeting("Harrison", 17);
