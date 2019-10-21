@@ -1,5 +1,6 @@
 function createGreeting(name, age) {
-    return `Hi, my name is ${name} and I \'m ${age} years old`;
+    let yearOfBirth = 2019 - age;
+    return `Hi, my name is ${name} and I \'m ${age} years old on ${yearOfBirth}`;
 }
 
 createGreeting("Harrison", 17);
