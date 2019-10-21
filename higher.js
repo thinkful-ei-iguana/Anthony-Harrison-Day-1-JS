@@ -1,11 +1,17 @@
 function repeat(fn, n) {
-    for(i=n; i < n; i++) {
-        console.log(i);
+
+    for(i = 0; i < n; i++) {
+        fn();
     }
-}
-
-function exampleFunction() {
 
 }
 
-repeat();
+function hello() {
+    console.log("Hello World");
+}
+
+function goodbye() {
+    console.log("Goodbye World");
+}
+
+repeat(goodbye, 5);
