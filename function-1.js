@@ -1,5 +1,7 @@
 function createGreeting() {
-    console.log('Hi, my name is Harrison and I \'m 17 years old');
+    return 'Hi, my name is Harrison and I \'m 17 years old';
 }
 
-createGreeting();
+let greeting = createGreeting();
+
+console.log(greeting);
