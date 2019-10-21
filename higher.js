@@ -53,5 +53,37 @@ function hazardWarningCreator(typeOfWarning) {
     }
 }
 
-const rocksWarning = hazardWarningCreator('Rocks on the Road');
-rocksWarning('Main St and Pacific Ave');
+// const rocksWarning = hazardWarningCreator('Rocks on the Road');
+// rocksWarning('Main St and Pacific Ave');
+
+let turtleArray = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+// let newArray = [];
+
+const result = turtleArray.filter(coordinates => {
+
+    if(coordinates[0] >= 0 && coordinates[1] >= 0) {
+        return coordinates;
+    }
+
+});
+
+const result_2 = turtleArray.map(coordinates => {
+
+    // if(coordinates[0] >= 0 && coordinates[1] >= 0) {
+    //     return coordinates;
+    // }
+    return coordinates[0] + coordinates[1];
+
+});
+
+let counter = 1;
+result_2.forEach(num => {
+    // let counter = counter++;
+    if(num === 1) {
+        console.log(`Movement #${counter}: ${num} step`);
+    } else {
+        console.log(`Movement #${counter}: ${num} steps`);
+    }
+    counter++;
+});
+
